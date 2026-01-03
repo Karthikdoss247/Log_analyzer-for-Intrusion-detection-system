@@ -1,0 +1,9 @@
+INTRUSION DETECTION INCIDENT REPORT
+==================================
+
+IP Address: 192.168.1.10
+Severity: HIGH
+
+IP Address: 192.168.1.20
+Severity: MEDIUM
+
