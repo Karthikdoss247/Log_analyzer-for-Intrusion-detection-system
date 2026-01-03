@@ -1,0 +1,106 @@
+1. Introduction:
+With the rapid growth of internet-based services, servers are increasingly exposed to cyber attacks such as brute-force login attempts, unauthorized access, and intrusion attempts. Manual monitoring of server logs is time-consuming and error-prone. Hence, automated log analysis systems play a vital role in detecting suspicious activities at an early stage.
+This project presents a GUI-Based Log Analyzer Intrusion Detection System that analyzes server access logs to detect brute-force attacks, classify attack severity, generate incident reports, and visualize attack patterns using graphs.
+2. Objectives of the Project:
+The main objectives of this project are:
+To analyze server access log files automatically
+To detect repeated failed login attempts
+To identify potential brute-force attacks
+To classify attack severity levels
+To generate incident and alert reports
+To visualize attack behavior using graphs
+To provide a user-friendly GUI for analysis
+3. Scope of the Project:
+This system is designed mainly for educational and demonstration purposes. It can be used as:
+A mini Intrusion Detection System (IDS)
+A log analyzer for honeypot environments
+A cybersecurity laboratory project
+A base model for SIEM or IDS systems
+The project works on offline log files, making it safe and suitable for learning environments.
+4. System Architecture:
+Components:
+Access Log File (access.log)
+Input file containing server request logs
+Log Analyzer Module
+Parses logs
+Detects failed login attempts
+Applies time-window logic
+Severity Classification Module
+LOW / MEDIUM / HIGH severity levels
+Report Generator
+Generates alert and incident reports
+Graph Generator
+Visualizes attack attempts per IP
+GUI Interface (Tkinter)
+User-friendly analysis interface
+5. Technologies Used:
+Technology
+Purpose
+Python 3
+Core programming language
+Tkinter
+GUI development
+Pandas
+Log data processing
+Matplotlib
+Graph generation
+Datetime
+Timestamp analysis
+6. Methodology:
+User selects a log file using GUI
+The system reads the access log line by line
+Failed login attempts (HTTP 401) are extracted
+Attempts are grouped by IP address
+Time-window analysis detects brute-force behavior
+Severity is assigned based on number of attempts
+Reports and graphs are generated automatically
+7. Features Implemented:
+✔ Log file parsing
+✔ Failed login detection
+✔ Time-window based attack detection
+✔ IP whitelist support
+✔ Severity classification
+✔ Incident report generation
+✔ Alert report generation
+✔ Graphical visualization
+✔ GUI-based execution
+8. Severity Classification Logic:
+Attempts
+Severity
+1–2
+LOW
+3–4
+MEDIUM
+≥5
+HIGH
+9. Output Generated:
+alerts.log – Records suspicious IP activity
+alert_report.txt – Summary of alerts
+incident_report.txt – Detailed incident report
+traffic_graph.png – Bar graph of attack attempts
+GUI Output Window – Displays detected alerts
+10. Sample Output:
+[ALERT]
+IP Address : 192.168.1.10
+Attempts   : 3
+Severity   : HIGH
+Graph shows failed login attempts per IP address.
+11. Advantages of the System:
+Easy to use GUI
+Automates log analysis
+Reduces manual effort
+Helps understand attack patterns
+Suitable for honeypot and IDS experiments
+12. Limitations:
+Works on offline log files only
+Does not block attackers automatically
+No real-time monitoring (can be added later)
+13. Future Enhancements:
+Real-time log monitoring
+Integration with honeypot servers
+Automatic IP blocking
+Geo-location mapping of attackers
+Web-based dashboard
+PDF report generation
+14. Conclusion
+The GUI-Based Log Analyzer Intrusion Detection System successfully detects brute-force login attempts by analyzing server access logs. It provides clear reports, severity classification, and visual graphs, making it a powerful learning tool for cybersecurity students. This project demonstrates the practical application of log analysis in intrusion detection systems.
